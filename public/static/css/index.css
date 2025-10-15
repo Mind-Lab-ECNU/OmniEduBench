@@ -1,0 +1,41 @@
+body {
+  font-family: "Google Sans", "Noto Sans", "Castoro", sans-serif;
+  background-color: #fdfdfd;
+  color: #1f2933;
+}
+
+.publication-title {
+  margin-bottom: 1.5rem;
+}
+
+.publication-authors {
+  line-height: 1.6;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.link-block {
+  display: inline-flex;
+}
+
+.eql-cntrb {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.section-anchor {
+  scroll-margin-top: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section.is-80-percent {
+    width: 100%;
+  }
+}

@@ -1,0 +1,43 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320">
+  <rect width="720" height="320" fill="#f1f5f9" rx="30" />
+  <g transform="translate(60 90)" font-family="Inter, Arial, sans-serif">
+    <rect x="0" y="0" width="150" height="140" rx="20" fill="#1d4ed8" opacity="0.12" />
+    <text x="20" y="32" font-size="16" font-weight="600" fill="#1f2937">Targeted</text>
+    <text x="20" y="54" font-size="16" font-weight="600" fill="#1f2937">Collection</text>
+    <text x="20" y="82" font-size="12" fill="#475569">• Public repositories</text>
+    <text x="20" y="102" font-size="12" fill="#475569">• Private school papers</text>
+    <text x="20" y="122" font-size="12" fill="#475569">• LLM synthesis</text>
+
+    <rect x="180" y="0" width="150" height="140" rx="20" fill="#2563eb" opacity="0.12" />
+    <text x="200" y="32" font-size="16" font-weight="600" fill="#1f2937">Structured</text>
+    <text x="200" y="54" font-size="16" font-weight="600" fill="#1f2937">Cleaning</text>
+    <text x="200" y="82" font-size="12" fill="#475569">Markdown conversion</text>
+    <text x="200" y="102" font-size="12" fill="#475569">Metadata extraction</text>
+    <text x="200" y="122" font-size="12" fill="#475569">Duplicate removal</text>
+
+    <rect x="360" y="0" width="150" height="140" rx="20" fill="#f97316" opacity="0.12" />
+    <text x="380" y="32" font-size="16" font-weight="600" fill="#1f2937">Dual-Machine</text>
+    <text x="380" y="54" font-size="16" font-weight="600" fill="#1f2937">Filtering</text>
+    <text x="380" y="82" font-size="12" fill="#475569">Contamination scan</text>
+    <text x="380" y="102" font-size="12" fill="#475569">Sensitive screening</text>
+    <text x="380" y="122" font-size="12" fill="#475569">LLM cross-check</text>
+
+    <rect x="540" y="0" width="150" height="140" rx="20" fill="#10b981" opacity="0.12" />
+    <text x="560" y="32" font-size="16" font-weight="600" fill="#1f2937">Expert</text>
+    <text x="560" y="54" font-size="16" font-weight="600" fill="#1f2937">Verification</text>
+    <text x="560" y="82" font-size="12" fill="#475569">Curriculum alignment</text>
+    <text x="560" y="102" font-size="12" fill="#475569">Difficulty balancing</text>
+    <text x="560" y="122" font-size="12" fill="#475569">Safety auditing</text>
+
+    <path d="M150 70 L180 70" stroke="#1d4ed8" stroke-width="3" marker-end="url(#arrow)" />
+    <path d="M330 70 L360 70" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)" />
+    <path d="M510 70 L540 70" stroke="#f97316" stroke-width="3" marker-end="url(#arrow)" />
+  </g>
+  <text x="60" y="40" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="20" fill="#0f172a">Four-stage construction pipeline</text>
+  <text x="60" y="72" font-family="Inter, Arial, sans-serif" font-size="14" fill="#475569">927K raw Q&A pairs → 657K validated samples</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1f2937" />
+    </marker>
+  </defs>
+</svg>

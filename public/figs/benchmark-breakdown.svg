@@ -1,0 +1,29 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#fff7ed" rx="28" />
+  <text x="60" y="60" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="22" fill="#9a3412">OmniEduBench Coverage</text>
+  <g transform="translate(60 90)" font-family="Inter, Arial, sans-serif">
+    <rect x="0" y="0" width="220" height="210" rx="18" fill="#fdba74" opacity="0.6" />
+    <text x="24" y="40" font-size="16" font-weight="600" fill="#7c2d12">Knowledge</text>
+    <text x="24" y="70" font-size="36" font-weight="700" fill="#7c2d12">41</text>
+    <text x="70" y="70" font-size="14" fill="#7c2d12">subjects</text>
+    <text x="24" y="100" font-size="12" fill="#7c2d12">11 question types</text>
+    <text x="24" y="124" font-size="12" fill="#7c2d12">Coverage: law, STEM, humanities, medicine</text>
+  </g>
+  <g transform="translate(260 110)" font-family="Inter, Arial, sans-serif">
+    <rect x="0" y="0" width="160" height="170" rx="18" fill="#f97316" opacity="0.2" />
+    <text x="24" y="38" font-size="16" font-weight="600" fill="#7c2d12">Cultivation</text>
+    <text x="24" y="68" font-size="36" font-weight="700" fill="#7c2d12">20</text>
+    <text x="70" y="66" font-size="14" fill="#7c2d12">competencies</text>
+    <text x="24" y="96" font-size="12" fill="#7c2d12">Values · social · emotion · feedback</text>
+  </g>
+  <g transform="translate(440 100)" font-family="Inter, Arial, sans-serif">
+    <rect x="0" y="0" width="150" height="190" rx="18" fill="#fed7aa" opacity="0.5" />
+    <text x="24" y="40" font-size="16" font-weight="600" fill="#7c2d12">Validated</text>
+    <text x="24" y="70" font-size="32" font-weight="700" fill="#7c2d12">657K</text>
+    <text x="24" y="96" font-size="12" fill="#7c2d12">Q&A pairs</text>
+    <text x="24" y="118" font-size="12" fill="#7c2d12">Metadata: subject, grade, ability</text>
+    <text x="24" y="140" font-size="12" fill="#7c2d12">Sources: public, private, LLM</text>
+  </g>
+  <line x1="60" y1="280" x2="580" y2="280" stroke="#f97316" stroke-width="4" stroke-linecap="round" />
+  <text x="60" y="300" font-family="Inter, Arial, sans-serif" font-size="12" fill="#9a3412">Raw 927K → Cleaned 657K (29% removed via cleaning and filtering)</text>
+</svg>

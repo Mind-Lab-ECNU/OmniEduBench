@@ -1,0 +1,117 @@
+
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2026_conference,times}
+
+% Optional math commands from https://github.com/goodfeli/dlbook_notation.
+\input{math_commands.tex}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{rotating}
+% zhangmin
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{tabularx}
+\usepackage{graphicx} % Required for \resizebox
+\definecolor{darkgrey}{rgb}{0.53,0.53,0.53}
+\definecolor{mygrey}{rgb}{0.9,0.9,0.9}
+\definecolor{blue1}{RGB}{166, 206, 227}
+\definecolor{blue2}{RGB}{28, 118, 179}
+\definecolor{myorange}{RGB}{192,97,21}
+\usepackage[most]{tcolorbox}
+\usepackage{CJKutf8}
+\newcommand{\cc}[1]{\begin{CJK*}{UTF8}{gbsn}#1\end{CJK*}}
+\usepackage{hyperref}
+\usepackage{multirow}
+
+\title{OmniEduBench: A Comprehensive Chinese Benchmark for Evaluating Large Language Models in Education}
+
+
+% Authors must not appear in the submitted version. They should be hidden
+% as long as the \iclrfinalcopy macro remains commented out below.
+% Non-anonymous submissions will be rejected without review.
+
+\author{
+Min Zhang$^{1}$\thanks{Project leader. Min Zhang (mzhang@cs.ecnu.edu.cn) } \quad 
+Hao Chen$^{1}$ \quad 
+Wenqi Zhang$^{2}$ \quad 
+Didi Zhu$^{3}$ \quad 
+Xin Lin$^{1}$ \quad 
+Bo Jiang$^{1}$\thanks{Corresponding authors. Bo Jiang (bjiang@deit.ecnu.edu.cn) and Aimin Zhou (amzhou@cs.ecnu.edu.cn)} \\[0.3em] 
+\ \textbf{Aimin Zhou}$^{1\dagger}$ \quad 
+\textbf{Fei Wu}$^{2}$ \quad 
+\textbf{Kun Kuang}$^{2}$ \\[0.3em]
+$^{1}$East China Normal University \quad 
+$^{2}$Zhejiang University \quad 
+$^{3}$Imperial College London \\[0.3em]
+{\tt\small mzhang@cs.ecnu.edu.cn} \quad
+{\tt\small bjiang@deit.ecnu.edu.cn} \quad
+{\tt\small amzhou@cs.ecnu.edu.cn} \\[0.5em]
+\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \url{https://omniedubench.github.io/}
+}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+%\iclrfinalcopy % Uncomment for camera-ready version, but NOT for submission.
+
+% \iclrfinalcopy
+
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+    With the rapid development of large language models (LLMs), various LLM-based works have been widely applied in educational fields. However, most existing LLMs and their benchmarks focus primarily on \textit{the knowledge dimension, largely neglecting the evaluation of cultivation capabilities} that are essential for real-world educational scenarios. Additionally, current benchmarks are often \textit{limited to a single subject or question type, lacking sufficient diversity}. This issue is particularly prominent within the Chinese context. To address this gap, we introduce \textbf{OmniEduBench, a comprehensive Chinese educational benchmark}. OmniEduBench consists of 24.602K high-quality question-answer pairs. The data is meticulously divided into two core dimensions: \textbf{the knowledge dimension and the cultivation dimension}, which contain 18.121K and 6.481K entries, respectively. Each dimension is further subdivided into 6 fine-grained categories, covering a total of 61 different subjects (41 in the knowledge and 20 in the cultivation). Furthermore, the dataset features a rich variety of question formats, including 11 common exam question types, providing a solid foundation for comprehensively evaluating LLMs' capabilities in education. Extensive experiments on 11 mainstream open-source and closed-source LLMs reveal a clear performance gap. In the knowledge dimension, only Gemini-2.5 Pro surpassed 60\% accuracy, while in the cultivation dimension, the best-performing model, QWQ, still trailed human intelligence by nearly 30\%. These results highlight the substantial room for improvement and underscore the challenges of applying LLMs in education.
+\end{abstract}
+
+\input{section/introduction}
+\input{section/method}
+\input{section/experiment}
+\input{section/related}
+
+\section{Conclusions, Discussions and Limitations}
+
+In this paper, we present OmniEduBench, a comprehensive Chinese educational benchmark designed to address the limitations of existing Chinese educational evaluation benchmarks. By moving beyond simple knowledge retrieval, the benchmark provides a holistic assessment of LLMs’ capabilities across two core dimensions: the knowledge and cultivation dimensions. We conducted extensive experiments on 11 mainstream LLMs, revealing significant performance gaps. While some models performed well on the knowledge dimension, their performance on cultivation tasks dropped substantially, with even the best-performing models trailing human-level performance by nearly 30\%. These findings indicate that despite recent advancements in LLM technology, current models still lack the deep reasoning and pedagogical skills necessary to function effectively as educational assistants. We believe OmniEduBench will serve as an important tool for guiding future research. Looking ahead, OmniEduBench plans to explore more complex question types in the cultivation dimension and introduce multimodal educational scenarios, further enhancing the benchmark’s role in evaluating and guiding the comprehensive capabilities of LLMs and MLLMs.
+
+
+% \subsubsection*{Author Contributions}
+% If you'd like to, you may include  a section for author contributions as is done
+% in many journals. This is optional and at the discretion of the authors.
+
+% \subsubsection*{Acknowledgments}
+% Use unnumbered third level headings for the acknowledgments. All
+% acknowledgments, including those to funding agencies, go at the end of the paper.
+
+
+\newpage
+
+
+\textbf{Ethics statement.}
+Our constructed OmniEduBench educational benchmark is built from publicly available educational resources as well as authorized private resources permitting open-source use, strictly adhering to copyright and licensing requirements. All data have been systematically processed to remove personally identifiable information (PII) and sensitive content, ensuring privacy and security. The dataset is intended solely for research purposes, aiming to advance the development and evaluation of large language models (LLMs) in educational scenarios.
+
+\textbf{Reprodicibility statement.}
+To ensure reproducibility, we provide detailed descriptions of the dataset construction process, annotation criteria, and experimental settings in both the main paper and the Appendix. The proposed OmniEduBench education dataset, together with preprocessing scripts, evaluation metrics, and model prompts, will be publicly released upon acceptance. All experiments were conducted using standard LLM APIs or open-source checkpoints, with model versions, hyperparameters, and evaluation protocols explicitly documented. This ensures that other researchers can faithfully replicate our results and readily extend the benchmark in future studies.
+
+\bibliography{iclr2026_conference}
+\bibliographystyle{iclr2026_conference}
+
+\appendix
+
+% 请在您的导言区 (preamble) 添加这个宏包以支持表格旋转
+%\usepackage{rotating}
+
+\input{section/appendix}
+
+\end{document}
+
+% \usepackage{rotating}

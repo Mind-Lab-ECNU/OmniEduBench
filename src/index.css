@@ -1,0 +1,15 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+.section-anchor {
+  scroll-margin-top: 120px;
+}

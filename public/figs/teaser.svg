@@ -1,0 +1,33 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#f8fafc" rx="28" />
+  <text x="80" y="70" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="22" fill="#1f2937">Knowledge Dimension</text>
+  <text x="360" y="70" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="22" fill="#1f2937">Cultivation Dimension</text>
+  <g transform="translate(60 100)">
+    <rect x="0" y="0" width="240" height="200" rx="20" fill="#dbeafe" />
+    <g transform="translate(24 32)" font-family="Inter, Arial, sans-serif" font-size="14" fill="#1f2937">
+      <text>• Law &amp; Politics</text>
+      <text y="30">• Foundational Disciplines</text>
+      <text y="60">• Humanities &amp; History</text>
+      <text y="90">• Medicine &amp; Health</text>
+      <text y="120">• Interdisciplinary &amp; Integrated</text>
+      <text y="150">• Economics &amp; Management</text>
+    </g>
+    <rect x="200" y="-12" width="80" height="30" rx="15" fill="#1d4ed8" opacity="0.15" />
+    <text x="120" y="190" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="12" fill="#1d4ed8">11 real exam question types</text>
+  </g>
+  <g transform="translate(340 100)">
+    <rect x="0" y="0" width="240" height="200" rx="20" fill="#fee2e2" />
+    <g transform="translate(24 32)" font-family="Inter, Arial, sans-serif" font-size="14" fill="#1f2937">
+      <text>• Character &amp; Values</text>
+      <text y="30">• Social &amp; Interpersonal</text>
+      <text y="60">• Personalised Development</text>
+      <text y="90">• Thinking &amp; Cognitive Skills</text>
+      <text y="120">• Teaching Feedback &amp; Support</text>
+      <text y="150">• Emotional &amp; Mental Health</text>
+    </g>
+    <rect x="-20" y="-12" width="96" height="30" rx="15" fill="#be123c" opacity="0.15" />
+    <text x="120" y="190" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="12" fill="#be123c">20 scenario-driven competencies</text>
+  </g>
+  <path d="M300 180 L340 180" stroke="#64748b" stroke-dasharray="6 6" stroke-width="2" />
+  <text x="320" y="168" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#475569">Balanced assessment</text>
+</svg>

@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" width="360" height="240">
+  <rect width="360" height="240" fill="#f1f5f9" rx="20" />
+  <g transform="translate(40 50)">
+    <rect x="0" y="0" width="260" height="140" rx="16" fill="#ffffff" stroke="#e2e8f0" />
+    <circle cx="70" cy="70" r="24" fill="#fee2e2" stroke="#ef4444" stroke-width="2" />
+    <circle cx="150" cy="90" r="32" fill="#fee2e2" stroke="#ef4444" stroke-width="2" opacity="0.8" />
+    <circle cx="210" cy="56" r="20" fill="#fef08a" stroke="#f59e0b" stroke-width="2" />
+    <text x="60" y="74" font-size="10" font-family="Inter, Arial" fill="#b91c1c">隐私</text>
+    <text x="138" y="94" font-size="10" font-family="Inter, Arial" fill="#b91c1c">偏见</text>
+    <text x="200" y="60" font-size="10" font-family="Inter, Arial" fill="#b45309">安全</text>
+    <line x1="90" y1="40" x2="170" y2="30" stroke="#2563eb" stroke-width="3" stroke-dasharray="4 6" />
+    <text x="40" y="130" font-size="11" font-family="Inter, Arial" fill="#475569">风险等级</text>
+  </g>
+  <text x="40" y="32" font-size="16" font-family="Inter, Arial" fill="#1f2937" font-weight="600">Risk Map</text>
+  <text x="40" y="210" font-size="13" font-family="Inter, Arial" fill="#475569">敏感话题 · 偏差措辞 · 安全红线</text>
+</svg>
