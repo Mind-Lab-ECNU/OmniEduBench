@@ -626,12 +626,12 @@ function App() {
                       <span className="icon">
                         <i className="ai ai-arxiv" aria-hidden="true" />
                       </span>
-                      <span>Paper</span>
+                      <span>arXiv</span>
                     </a>
                   </span>
                   <span className="link-block">
                     <a
-                      href="https://github.com/OmniEduBench/OmniEduBench"
+                      href="https://github.com/remiMZ/OmniEduBench-code/tree/main"
                       target="_blank"
                       rel="noreferrer"
                       className="external-link button is-normal is-rounded is-dark"
@@ -652,7 +652,7 @@ function App() {
                       <span className="icon">
                         <i className="fas fa-database" aria-hidden="true" />
                       </span>
-                      <span>Data</span>
+                      <span>Dataset</span>
                     </a>
                   </span>
                 </div>
@@ -704,7 +704,7 @@ function App() {
         <div className="container is-max-desktop">
           <div className="columns is-centered has-text-centered">
             <div className="section is-80-percent">
-              <h2 className="title is-3">Benchmark at a Glance</h2>
+              <h2 className="title is-3">Benchmark Statistics</h2>
               <figure className="is-tight-figure">
                 <img
                   src="static/images/omniedu_teaser.png"
@@ -714,12 +714,14 @@ function App() {
               </figure>
               <div className="tight-text" style={{ textAlign: 'left' }}>
                 <p>
-                  OmniEduBench aligns 41 knowledge subjects—from foundational science to professional licensing—with six
-                  thematic groupings, including foundational disciplines (FD), humanities and history (HH), social science
-                  and economics (SSEM), law and politics (LP), medicine and health (MH), and interdisciplinary studies
-                  (IIS). The cultivation axis spans six competency clusters such as teaching cognition support (TCS),
-                  emotional and mental health (EMH), student interaction skills (SIS), civic values (CV), personalised
-                  development (PD), and teacher feedback skills (TFS).
+                  \textbf{Overview of OmniEduBench statistics.} The benchmark is structured along two complementary 
+                  dimensions: knowledge and cultivation. The knowledge dimension encompasses 41 subjects 
+                  distributed across six categories — foundational disciplines (FD), humanities and history
+                  (HH), social science and economics (SSEM), law and politics (LP), medicine and health (MH), 
+                  and interdisciplinary studies (IIS). The cultivation dimension covers 20 subjects across 
+                  six categories — teaching cognition support (TCS), emotional and mental health (EMH), 
+                  student interaction skills (SIS), civic values (CV), personalised development (PD), 
+                  and teacher feedback skills (TFS).
                 </p>
               </div>
             </div>
@@ -727,6 +729,26 @@ function App() {
         </div>
       </section>
 
+      <section className="section is-small-padding">
+        <div className="container is-max-desktop">
+          <div className="columns is-centered has-text-centered">
+            <div className="section is-80-percent">
+              <h2 className="title is-3">Construction Pipeline</h2>
+              <figure className="is-tight-figure">
+                <img
+                  src="static/images/omniedu_pipeline.png"
+                  alt="Four-stage construction pipeline"
+                  style={{ maxWidth: '100%', height: 'auto' }}
+                />
+              <div className="tight-text" style={{ textAlign: 'left' }}>
+                <p>
+                  \textbf{Overview of the OmniEduBench construction process.} 
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+              
       <section className="section is-small-padding">
         <div className="container is-max-desktop">
           <div className="columns is-centered has-text-centered">
@@ -750,32 +772,12 @@ function App() {
         </div>
       </section>
 
-      <section className="section is-small-padding">
-        <div className="container is-max-desktop">
-          <div className="columns is-centered has-text-centered">
-            <div className="section is-80-percent">
-              <h2 className="title is-3">Construction Pipeline</h2>
-              <figure className="is-tight-figure">
-                <img
-                  src="static/images/omniedu_pipeline.png"
-                  alt="Four-stage construction pipeline"
-                  style={{ maxWidth: '100%', height: 'auto' }}
-                />
-              </figure>
-              <p style={{ textAlign: 'left', whiteSpace: 'normal', maxWidth: '95%', margin: '0 auto' }}>
-                A unified engineering workflow manages ingestion, conversion, metadata tagging, leak detection, and
-                manual auditing. Difficult cultivation prompts are co-designed with education experts, while hard knowledge
-                questions undergo automatic difficulty calibration to ensure they challenge state-of-the-art models.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <section className="section" id="EvaluationResults">
         <div className="container is-max-desktop content">
           <DataTable
-            title="Knowledge Dimension Leaderboard"
+            title="Leaderboard"
             caption={
               <>
                 <b>Zero-shot accuracy (%) across six knowledge categories.</b> <code>FD</code> denotes foundational
@@ -783,12 +785,18 @@ function App() {
                 <code>LP</code> law and politics, <code>MH</code> medicine and health, <code>IIS</code> interdisciplinary
                 studies.
               </>
+              <>
+                <b>Zero-shot accuracy (%) across six cultivation competencies.</b> <code>TCS</code> teaching cognition
+                support, <code>EMH</code> emotional and mental health, <code>SIS</code> student interaction skills,
+                <code>CV</code> civic values, <code>PD</code> personalised development, <code>TFS</code> teacher feedback
+                skills.
+              </>
             }
             columns={knowledgeColumns}
             rows={knowledgeRows}
           />
 
-          <DataTable
+          {/* <DataTable
             title="Cultivation Dimension Leaderboard"
             caption={
               <>
@@ -800,7 +808,7 @@ function App() {
             }
             columns={cultivationColumns}
             rows={cultivationRows}
-          />
+          /> */}
         </div>
       </section>
 
