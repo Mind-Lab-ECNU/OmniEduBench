@@ -613,9 +613,6 @@ function App() {
                 </p>
                 <p className="is-size-6">
                   * Project leader · † Corresponding authors ·{' '}
-                  <a href="https://omniedubench.github.io/" target="_blank" rel="noreferrer">
-                    https://omniedubench.github.io/
-                  </a>
                 </p>
 
                 <div className="publication-links" style={{ marginTop: '2rem' }}>
@@ -660,7 +657,7 @@ function App() {
                   </span>
                 </div>
 
-                <div className="is-size-5 publication-authors" style={{ marginTop: '2.5rem' }}>
+                {/* <div className="is-size-5 publication-authors" style={{ marginTop: '2.5rem' }}>
                   <h2 className="title is-4">Key Contributions</h2>
                   <ul style={{ listStyle: 'disc', marginLeft: '1.5rem', textAlign: 'left' }}>
                     {keyHighlights.map((highlight) => (
@@ -673,7 +670,7 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <section className="section hero is-light">
@@ -683,15 +680,19 @@ function App() {
               <h2 className="title is-3">Abstract</h2>
               <div className="content has-text-justified">
                 <p>
-                  OmniEduBench delivers a natively Chinese benchmark that evaluates large language models across both
-                  knowledge mastery and cultivation-oriented educational support. The benchmark contains 24.6K carefully
-                  curated question-answer pairs spanning 41 academic subjects and 20 pedagogical competencies, all aligned
-                  with eleven classroom-assessment formats. A four-stage pipeline—combining public corpora, authorized
-                  private exams, LLM-assisted synthesis, and expert review—filters 927K raw items into a high-quality
-                  evaluation suite. Experiments on 11 leading LLMs reveal clear gaps: only Gemini-2.5 Pro exceeds 60%
-                  accuracy on knowledge tasks, while the best cultivation performance from QwQ still trails human
-                  teachers by almost 30%. OmniEduBench exposes the need for future models that integrate cultural context,
-                  long-form reasoning, and student-centric feedback.
+                  With the rapid development of large language models (LLMs), various LLM-based works have been widely applied in educational fields. 
+                  However, most existing LLMs and their benchmarks focus primarily on the knowledge dimension, largely neglecting the evaluation 
+                  of cultivation capabilities that are essential for real-world educational scenarios. Additionally, current benchmarks are often limited 
+                  to a single subject or question type, lacking sufficient diversity. This issue is particularly prominent within the Chinese context. 
+                  To address this gap, we introduce OmniEduBench, a comprehensive Chinese educational benchmark. OmniEduBench consists of 24.602K 
+                  high-quality question-answer pairs. The data is meticulously divided into two core dimensions: the knowledge dimension and the 
+                  cultivation dimension, which contain 18.121K and 6.481K entries, respectively. Each dimension is further subdivided into 6 fine-grained 
+                  categories, covering a total of 61 different subjects (41 in the knowledge and 20 in the cultivation). Furthermore, the dataset features 
+                  a rich variety of question formats, including 11 common exam question types, providing a solid foundation for comprehensively evaluating 
+                  LLMs' capabilities in education. Extensive experiments on 11 mainstream open-source and closed-source LLMs reveal a clear performance gap. 
+                  In the knowledge dimension, only Gemini-2.5 Pro surpassed 60\% accuracy, while in the cultivation dimension, the best-performing model, QWQ, 
+                  still trailed human intelligence by nearly 30\%. These results highlight the substantial room for improvement and underscore the challenges 
+                  of applying LLMs in education.
                 </p>
               </div>
             </div>
