@@ -690,8 +690,8 @@ function App() {
                   categories, covering a total of 61 different subjects (41 in the knowledge and 20 in the cultivation). Furthermore, the dataset features 
                   a rich variety of question formats, including 11 common exam question types, providing a solid foundation for comprehensively evaluating 
                   LLMs' capabilities in education. Extensive experiments on 11 mainstream open-source and closed-source LLMs reveal a clear performance gap. 
-                  In the knowledge dimension, only Gemini-2.5 Pro surpassed 60\% accuracy, while in the cultivation dimension, the best-performing model, QWQ, 
-                  still trailed human intelligence by nearly 30\%. These results highlight the substantial room for improvement and underscore the challenges 
+                  In the knowledge dimension, only Gemini-2.5 Pro surpassed 60% accuracy, while in the cultivation dimension, the best-performing model, QWQ, 
+                  still trailed human intelligence by nearly 30%. These results highlight the substantial room for improvement and underscore the challenges 
                   of applying LLMs in education.
                 </p>
               </div>
@@ -707,7 +707,7 @@ function App() {
               <h2 className="title is-3">Benchmark Statistics</h2>
               <figure className="is-tight-figure">
                 <img
-                  src="static/images/omniedu_teaser.png"
+                  src="static/images/omniedu_teaser.jpg"
                   alt="Overview of OmniEduBench knowledge and cultivation axes"
                   style={{ maxWidth: '100%', height: 'auto' }}
                 />
@@ -891,13 +891,7 @@ function App() {
         <div className="container is-max-desktop content">
           <h2 className="title">BibTeX</h2>
           <pre>
-            <code>{`@misc{omniedubench2026,
-  title        = {OmniEduBench: A Comprehensive Chinese Benchmark for Evaluating Large Language Models in Education},
-  author       = {Min Zhang and Hao Chen and Hao Chen and Wenqi Zhang and Didi Zhu and Xin Lin and Bo Jiang and Aimin Zhou and Fei Wu and Kun Kuang},
-  year         = {2026},
-  url          = {https://github.com/OmniEduBench/OmniEduBench},
-  note         = {ICLR 2026 submission},
-}`}</code>
+            <code>{``}</code>
           </pre>
         </div>
       </section>
