@@ -618,7 +618,7 @@ function App() {
                 <div className="publication-links" style={{ marginTop: '2rem' }}>
                   <span className="link-block">
                     <a
-                      href="https://arxiv.org/abs/2505.21333"
+                      href="https://arxiv.org/pdf/2510.26422"
                       target="_blank"
                       rel="noreferrer"
                       className="external-link button is-normal is-rounded is-dark"
@@ -666,11 +666,11 @@ function App() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </section>
 
       <section className="section hero is-light">
@@ -714,7 +714,7 @@ function App() {
               </figure>
               <div className="tight-text" style={{ textAlign: 'left' }}>
                 <p>
-                  \textbf{Overview of OmniEduBench statistics.} The benchmark is structured along two complementary 
+                  <strong>Overview of OmniEduBench statistics.</strong> The benchmark is structured along two complementary 
                   dimensions: knowledge and cultivation. The knowledge dimension encompasses 41 subjects 
                   distributed across six categories — foundational disciplines (FD), humanities and history
                   (HH), social science and economics (SSEM), law and politics (LP), medicine and health (MH), 
@@ -740,10 +740,12 @@ function App() {
                   alt="Four-stage construction pipeline"
                   style={{ maxWidth: '100%', height: 'auto' }}
                 />
+                </figure>
               <div className="tight-text" style={{ textAlign: 'left' }}>
                 <p>
-                  \textbf{Overview of the OmniEduBench construction process.} 
-              </p>
+                  <strong>Overview of the OmniEduBench construction process.</strong>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -784,8 +786,7 @@ function App() {
                 disciplines, <code>HH</code> humanities and history, <code>SSEM</code> social science and economics,
                 <code>LP</code> law and politics, <code>MH</code> medicine and health, <code>IIS</code> interdisciplinary
                 studies.
-              </>
-              <>
+                <br />
                 <b>Zero-shot accuracy (%) across six cultivation competencies.</b> <code>TCS</code> teaching cognition
                 support, <code>EMH</code> emotional and mental health, <code>SIS</code> student interaction skills,
                 <code>CV</code> civic values, <code>PD</code> personalised development, <code>TFS</code> teacher feedback
