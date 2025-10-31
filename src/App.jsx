@@ -743,7 +743,9 @@ function App() {
                 </figure>
               <div className="tight-text" style={{ textAlign: 'left' }}>
                 <p>
-                  <strong>Overview of the OmniEduBench construction process.</strong>
+                  <strong>Overview of the OmniEduBench construction process.</strong> OmniEduBench is built through a rigorous four-stage pipeline: dataset collection, cleaning, automated filtering, and expert verification. We gathered data from diverse sources, including manually curated public educational platforms, private school examination materials to avoid data contamination, and expert-guided LLM-generated content to supplement underrepresented domains. This process yielded 927K initial Q&A pairs.
+After structured formatting, metadata extraction, and thorough cleaning to remove duplicates, incomplete items, and sensitive content, 657K samples remained. To ensure difficulty and model-discriminative value, we applied a dual-model filtering strategy using QWQ32B and Qwen3-235B, retaining only items both models failed on, resulting in 50K challenging questions.
+Finally, a two-tier human review involving trained annotators and senior experts refined the dataset to 24.6K high-quality Q&A pairs, ensuring reliability and comprehensive educational coverage.
                 </p>
               </div>
             </div>
