@@ -612,7 +612,7 @@ function App() {
                   <a href="mailto:amzhou@cs.ecnu.edu.cn">amzhou@cs.ecnu.edu.cn</a>
                 </p>
                 <p className="is-size-6">
-                  * Project leader · † Corresponding authors ·{' '}
+                  * Project leader · † Corresponding authors{' '}
                 </p>
 
                 <div className="publication-links" style={{ marginTop: '2rem' }}>
@@ -743,9 +743,7 @@ function App() {
                 </figure>
               <div className="tight-text" style={{ textAlign: 'left' }}>
                 <p>
-                  <strong>Overview of the OmniEduBench construction process.</strong> OmniEduBench is built through a rigorous four-stage pipeline: dataset collection, cleaning, automated filtering, and expert verification. We gathered data from diverse sources, including manually curated public educational platforms, private school examination materials to avoid data contamination, and expert-guided LLM-generated content to supplement underrepresented domains. This process yielded 927K initial Q&A pairs.
-After structured formatting, metadata extraction, and thorough cleaning to remove duplicates, incomplete items, and sensitive content, 657K samples remained. To ensure difficulty and model-discriminative value, we applied a dual-model filtering strategy using QWQ32B and Qwen3-235B, retaining only items both models failed on, resulting in 50K challenging questions.
-Finally, a two-tier human review involving trained annotators and senior experts refined the dataset to 24.6K high-quality Q&A pairs, ensuring reliability and comprehensive educational coverage.
+                  <strong>Overview of the OmniEduBench construction process.</strong>  Through rigorous data filtering and expert validation, we collected 18.121K high-quality question–answer pairs for the knowledge and 6.481K for the cultivation. As summarized in Table 1, the dataset spans 12 major categories, including K-12, higher school, university-level courses, and cultivation aspects such as emotion and reasoning, covering a total of 61 specific scenarios. Figures (a) and (b) present some representative examples in different dimensions and question types. The questions exhibit wide variability in type and difficulty and are sourced from diverse origins, primarily newly collected from public or private resources or manually constructed.
                 </p>
               </div>
             </div>
@@ -760,7 +758,17 @@ Finally, a two-tier human review involving trained annotators and senior experts
               <h2 className="title is-3">Data Coverage</h2>
               <figure className="is-tight-figure">
                 <img
-                  src="static/images/omniedu_stats.png"
+                  src="static/images/table_1.png"
+                  alt="Distribution of OmniEduBench subjects and competencies"
+                  style={{ maxWidth: '100%', height: 'auto' }}
+                />
+                <img
+                  src="static/images/omniedu_stats_A.jpg"
+                  alt="Distribution of OmniEduBench subjects and competencies"
+                  style={{ maxWidth: '100%', height: 'auto' }}
+                />
+                <img
+                  src="static/images/omniedu_stats_B.png"
                   alt="Distribution of OmniEduBench subjects and competencies"
                   style={{ maxWidth: '100%', height: 'auto' }}
                 />
@@ -780,38 +788,24 @@ Finally, a two-tier human review involving trained annotators and senior experts
 
       <section className="section" id="EvaluationResults">
         <div className="container is-max-desktop content">
-          <DataTable
-            title="Leaderboard"
-            caption={
-              <>
-                <b>Zero-shot accuracy (%) across six knowledge categories.</b> <code>FD</code> denotes foundational
-                disciplines, <code>HH</code> humanities and history, <code>SSEM</code> social science and economics,
-                <code>LP</code> law and politics, <code>MH</code> medicine and health, <code>IIS</code> interdisciplinary
-                studies.
-                <br />
-                <b>Zero-shot accuracy (%) across six cultivation competencies.</b> <code>TCS</code> teaching cognition
-                support, <code>EMH</code> emotional and mental health, <code>SIS</code> student interaction skills,
-                <code>CV</code> civic values, <code>PD</code> personalised development, <code>TFS</code> teacher feedback
-                skills.
-              </>
-            }
-            columns={knowledgeColumns}
-            rows={knowledgeRows}
-          />
-
-          {/* <DataTable
-            title="Cultivation Dimension Leaderboard"
-            caption={
-              <>
-                <b>Zero-shot accuracy (%) across six cultivation competencies.</b> <code>TCS</code> teaching cognition
-                support, <code>EMH</code> emotional and mental health, <code>SIS</code> student interaction skills,
-                <code>CV</code> civic values, <code>PD</code> personalised development, <code>TFS</code> teacher feedback
-                skills.
-              </>
-            }
-            columns={cultivationColumns}
-            rows={cultivationRows}
-          /> */}
+          <h2 className="title is-3 has-text-centered">Leaderboard</h2>
+          <figure className="is-tight-figure">
+            <img
+              src="static/images/leaderboard1.png"
+              alt="Leaderboard 1"
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+            <img
+              src="static/images/leaderboard2.png"
+              alt="Leaderboard 2"
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+            <img
+              src="static/images/leaderboard3.png"
+              alt="Leaderboard 3"
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+          </figure>
         </div>
       </section>
 
@@ -840,7 +834,7 @@ Finally, a two-tier human review involving trained annotators and senior experts
         <div className="container is-max-desktop">
           <div className="columns is-centered has-text-centered">
             <div className="section is-80-percent">
-              <h2 className="title is-3">Construction Details</h2>
+              <h2 className="title is-3">Conclusion</h2>
               <ol style={{ textAlign: 'left', marginLeft: '1.5rem' }}>
                 {constructionSteps.map((step) => (
                   <li key={step.title} style={{ marginBottom: '1rem' }}>
@@ -853,47 +847,17 @@ Finally, a two-tier human review involving trained annotators and senior experts
         </div>
       </section>
 
-      <div className="has-text-centered" style={{ marginBottom: '1rem' }}>
-        <button className="button is-info is-light is-large" type="button" onClick={() => setAnalysisVisible((v) => !v)}>
-          <span className="is-size-3">{analysisToggleLabel}</span>
-        </button>
-      </div>
-
-      <section
-        id="analysis-section"
-        className="section is-small-padding"
-        style={{ display: analysisVisible ? 'block' : 'none' }}
-      >
-        <div className="container is-max-desktop">
-          <div className="columns is-centered">
-            <div className="column is-12-desktop">
-              <h2 className="title is-3 has-text-centered">Analysis</h2>
-              <div
-                className="analysis-card"
-                style={{
-                  border: '1px solid #ddd',
-                  borderRadius: '12px',
-                  padding: '2rem',
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
-                  backgroundColor: '#fafafa',
-                }}
-              >
-                {analysisInsights.map((insight) => (
-                  <p key={insight.title}>
-                    <strong>{insight.title}.</strong> {insight.detail}
-                  </p>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="section" id="BibTeX">
         <div className="container is-max-desktop content">
           <h2 className="title">BibTeX</h2>
-          <pre>
-            <code>{``}</code>
+          <pre style={{ textAlign: 'left' }}>
+            <code>{`@article{zhang2025omniedubench,
+  title={OmniEduBench: A Comprehensive Chinese Benchmark for Evaluating Large Language Models in Education},
+  author={Zhang, Min  and Chen, Hao and Chen, Hao and Zhang, Wenqi and  Zhu, Didi and Lin, Xin and Jiang, Bo and Zhou, Aimin and Wu, Fei and Kuang, Kun},
+  journal={arXiv preprint arXiv:2510.26422},
+  year={2025}
+}`}</code>
           </pre>
         </div>
       </section>
