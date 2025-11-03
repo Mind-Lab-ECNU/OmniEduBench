@@ -824,20 +824,6 @@ function App() {
                   research, including planned expansions into more complex cultivation questions and multimodal
                   educational settings for evaluating both LLMs and MLLMs.
                 </p>
-                <p>
-                  <strong>Ethics statement.</strong> OmniEduBench is assembled from publicly available educational resources and
-                  authorized private materials cleared for open-source use, with all content curated in line with
-                  copyright and licensing requirements. Personally identifiable information and sensitive details are
-                  removed through systematic processing, and the dataset is released exclusively for research to advance
-                  LLM development in educational contexts.
-                </p>
-                <p>
-                  <strong>Reproducibility statement.</strong> We describe dataset construction, annotation standards, and experimental
-                  setups in detail in the paper and appendix. Upon acceptance we will release the dataset, preprocessing
-                  scripts, evaluation metrics, and prompts. All experiments rely on standard LLM APIs or open-source
-                  checkpoints with model versions, hyperparameters, and evaluation protocols recorded, enabling the
-                  community to reproduce results and extend the benchmark.
-                </p>
               </div>
             </div>
           </div>
