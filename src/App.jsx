@@ -11,6 +11,14 @@ const inlineStyles = `
     display: block;
   }
 
+  .tight-figure img,
+  .is-tight-figure img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
   .tight-text {
     margin-top: 0.5rem;
   }
@@ -461,29 +469,6 @@ const statsCards = [
   { label: 'Models Evaluated', value: '11', helper: '8 open-source and 3 closed-source LLMs benchmarked.' },
 ];
 
-const constructionSteps = [
-  {
-    title: 'Targeted Collection',
-    detail:
-      'Blend public exam repositories, authorized private papers, and expert-guided LLM synthesis to cover underrepresented subjects and cultivation scenarios.',
-  },
-  {
-    title: 'Structured Cleaning',
-    detail:
-      'Normalize formats, deduplicate near-identical questions, and align metadata for grade, subject, competency, and difficulty.',
-  },
-  {
-    title: 'Dual-Machine Filtering',
-    detail:
-      'Leverage cross-model agreement checks and automated validation to eliminate leakage, ambiguous wording, and low-quality generations.',
-  },
-  {
-    title: 'Expert Verification',
-    detail:
-      'Education specialists audit question-answer pairs, refine distractors, and annotate pedagogical rationales for cultivation tasks.',
-  },
-];
-
 const analysisInsights = [
   {
     title: 'Knowledge vs. Cultivation Gap',
@@ -709,7 +694,6 @@ function App() {
                 <img
                   src="static/images/omniedu_teaser.jpg"
                   alt="Overview of OmniEduBench knowledge and cultivation axes"
-                  style={{ maxWidth: '100%', height: 'auto' }}
                 />
               </figure>
               <div className="tight-text" style={{ textAlign: 'left' }}>
@@ -738,7 +722,6 @@ function App() {
                 <img
                   src="static/images/omniedu_pipeline.png"
                   alt="Four-stage construction pipeline"
-                  style={{ maxWidth: '100%', height: 'auto' }}
                 />
                 </figure>
               <div className="tight-text" style={{ textAlign: 'left' }}>
@@ -760,17 +743,14 @@ function App() {
                 <img
                   src="static/images/table_1.png"
                   alt="Distribution of OmniEduBench subjects and competencies"
-                  style={{ maxWidth: '100%', height: 'auto' }}
                 />
                 <img
                   src="static/images/omniedu_stats_A.jpg"
                   alt="Distribution of OmniEduBench subjects and competencies"
-                  style={{ maxWidth: '100%', height: 'auto' }}
                 />
                 <img
                   src="static/images/omniedu_stats_B.png"
                   alt="Distribution of OmniEduBench subjects and competencies"
-                  style={{ maxWidth: '100%', height: 'auto' }}
                 />
               </figure>
               <p style={{ textAlign: 'left', whiteSpace: 'normal', maxWidth: '95%', margin: '0 auto' }}>
@@ -793,17 +773,14 @@ function App() {
             <img
               src="static/images/leaderboard1.png"
               alt="Leaderboard 1"
-              style={{ maxWidth: '100%', height: 'auto' }}
             />
             <img
               src="static/images/leaderboard2.png"
               alt="Leaderboard 2"
-              style={{ maxWidth: '100%', height: 'auto' }}
             />
             <img
               src="static/images/leaderboard3.png"
               alt="Leaderboard 3"
-              style={{ maxWidth: '100%', height: 'auto' }}
             />
           </figure>
         </div>
@@ -835,13 +812,33 @@ function App() {
           <div className="columns is-centered has-text-centered">
             <div className="section is-80-percent">
               <h2 className="title is-3">Conclusion</h2>
-              <ol style={{ textAlign: 'left', marginLeft: '1.5rem' }}>
-                {constructionSteps.map((step) => (
-                  <li key={step.title} style={{ marginBottom: '1rem' }}>
-                    <strong>{step.title}.</strong> {step.detail}
-                  </li>
-                ))}
-              </ol>
+              <div style={{ textAlign: 'left' }}>
+                <p>
+                  In this paper, we present OmniEduBench, a comprehensive Chinese educational benchmark designed to
+                  address the limitations of existing evaluation suites. By moving beyond simple knowledge retrieval, the
+                  benchmark measures large language models across the knowledge and cultivation dimensions. Experiments
+                  on 11 mainstream LLMs reveal sizable performance gaps: models that excel in knowledge-focused tasks
+                  struggle with cultivation scenarios, and even the strongest systems trail human-level performance by
+                  nearly 30%. These results show that current LLMs still lack the deep reasoning and pedagogical
+                  abilities required for effective educational assistance. We expect OmniEduBench to guide future
+                  research, including planned expansions into more complex cultivation questions and multimodal
+                  educational settings for evaluating both LLMs and MLLMs.
+                </p>
+                <p>
+                  <strong>Ethics statement.</strong> OmniEduBench is assembled from publicly available educational resources and
+                  authorized private materials cleared for open-source use, with all content curated in line with
+                  copyright and licensing requirements. Personally identifiable information and sensitive details are
+                  removed through systematic processing, and the dataset is released exclusively for research to advance
+                  LLM development in educational contexts.
+                </p>
+                <p>
+                  <strong>Reproducibility statement.</strong> We describe dataset construction, annotation standards, and experimental
+                  setups in detail in the paper and appendix. Upon acceptance we will release the dataset, preprocessing
+                  scripts, evaluation metrics, and prompts. All experiments rely on standard LLM APIs or open-source
+                  checkpoints with model versions, hyperparameters, and evaluation protocols recorded, enabling the
+                  community to reproduce results and extend the benchmark.
+                </p>
+              </div>
             </div>
           </div>
         </div>
